@@ -1,0 +1,26 @@
+import java.rmi.*;
+
+class server //extends UnicastRemoteObject implements Adder
+{
+	public static void main(String args[])
+	{
+		try
+		{
+			Calc c = new CalcImpl();
+			Naming.rebind("rmi://localhost/add",ad);
+		}
+		catch(Exception ee)
+		{
+			System.out.println(ee.getMessage());
+		}
+	}
+	// public AdderImpl() throws RemoteException
+	// {
+		// super();
+	// }
+	
+	// public int add(int x,int y)
+	// {
+		
+	// }
+}
